@@ -1,0 +1,2 @@
+_target_: src.model.ConformerModel
+n_feats: 128

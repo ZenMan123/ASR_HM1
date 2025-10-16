@@ -1,0 +1,9 @@
+train: []
+inference:
+  - _target_: src.metrics.BeamSearchCERMetric
+    name: "CER_(Argmax)"
+    use_lm: true
+
+  - _target_: src.metrics.BeamSearchWERMetric
+    name: "WER_(Argmax)"
+    use_lm: true

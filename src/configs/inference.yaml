@@ -1,0 +1,14 @@
+defaults:
+  - model: conformer
+  - metrics: beam_lm
+  - datasets: custom_dir_dataset
+  - dataloader: onebatchtest
+  - transforms: example_only_instance
+  - text_encoder: sp_ctc_text_encoder
+  - _self_
+inferencer:
+  device_tensors: ["spectrogram", "text_encoded"] # which tensors should be on device (ex. GPU)
+  device: auto # device name or "auto"
+  save_path: "example" # any name here, can be a dataset name
+  seed: 1
+  from_pretrained: "saved/asr_checkpoint_v1/model_best.pth" # path to the pretrained model

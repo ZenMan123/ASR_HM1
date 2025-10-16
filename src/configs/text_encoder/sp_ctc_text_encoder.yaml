@@ -1,0 +1,7 @@
+_target_: src.text_encoder.sp_ctc_text_encoder.SPCTCTextEncoder
+sp_model_name: asr_sp.model
+dataset:
+  _target_: src.datasets.LibrispeechDataset
+  part: "train-clean-100"
+  instance_transforms: ${transforms.instance_transforms.train}
+
