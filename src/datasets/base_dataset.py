@@ -84,7 +84,6 @@ class BaseDataset(Dataset):
         text = data_dict["text"]
         text_encoded = self.text_encoder.encode(text)
 
-        print(self.instance_transforms)
         if self.instance_transforms is not None and "audio" in self.instance_transforms:
             audio = self.instance_transforms["audio"](audio)
 

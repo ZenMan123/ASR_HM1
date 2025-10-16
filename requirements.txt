@@ -3,6 +3,8 @@ torchvision==0.17.0
 torchaudio==2.2.0
 sentencepiece==0.2.1
 
+kenlm
+flashlight-text
 numpy
 scipy
 pyctcdecode
